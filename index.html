@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            background-color: gray;
+
+        }
+        .container{
+            display: flex;
+            gap: 15px;
+            padding: 10px;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%;
+            background-color: white;
+           
+        }
+        .para{
+            padding: 10px;
+        }
+        .btn{
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+        }
+        .para input{
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+    </style>
+    <div class="container">
+        <p id="content">EqFtlZ</p>
+        <div class="para">
+
+            <input id="inputbox" type="text">
+            <button id="btn1" class="btn">verify</button>
+        </div>
+    </div>
+    <script>
+        var inputbox=document.getElementById("inputbox")
+        var btn1=document.getElementById("btn1")
+        var content=document.getElementById("content")
+        btn1.addEventListener("click",function(){
+            if(inputbox.value==content.textContent){
+                alert("CAPTCHA Verified Succesfully")
+            }
+            else{
+                alert("CAPTCHA Verification Failed Please Try Again ")
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
